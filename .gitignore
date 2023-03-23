@@ -1,3 +1,4 @@
+# Standard files
 /node_modules
 /coverage
 /cli
@@ -7,7 +8,9 @@
 .vscode
 .DS_Store
 .parcel-cache
-tailwind.config.js
 yarn.lock
 yarn-error.log
 types/generated/*.d.ts
+
+# SCSS
+/scss
