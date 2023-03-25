@@ -1,28 +1,53 @@
+.logo-text {
+  color: #C10505; }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
 
 bodyhome {
-  font-family: "Roboto", sans-serif;
-  line-height: 1.6;
-  background: #fff; }
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.5;
+  background: #f4f4f4; }
 
-.container {
-  position: relative;
-  background: url("../img/red_queen_bg_image.png") no-repeat center center/cover;
-  height: 100vh;
-  width: 100%; }
+header h1 {
+  text-align: start;
+  font-family: "Great Vibes", "cursive"; }
 
-.container::before {
-  content: '';
-  position: absolute;
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.8;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: black;
-  opacity: 0; }
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 30px; }
+  header .navbar a {
+    font-family: "Anton", sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px; }
+    header .navbar a:hover {
+      color: #C10505;
+      border-bottom: #C10505 3px solid; }
+  header .navbar ul {
+    display: flex;
+    list-style: none; }
 
-.container * {
-  z-index: 10; }
+header .content {
+  font-family: "Roboto Condensed", sans-serif; }
+  header .content h1 {
+    font-family: "Anton", sans-serif;
+    color: #f4f4f4;
+    line-height: 1.2; }
+  header .content p {
+    margin: 10px 0; }
+  header .content a {
+    font-family: "Anton", sans-serif;
+    color: #f4f4f4; }

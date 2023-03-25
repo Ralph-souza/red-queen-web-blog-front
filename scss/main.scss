@@ -1,4 +1,5 @@
 @import 'config';
+@import 'utils';
 
 * {
     box-sizing: border-box;
@@ -8,30 +9,69 @@
 
 body {
     &home {
-        font-family: $body-text;
-        line-height: 1.6;
-        background: #fff;
-    } 
+        font-family: $body-font;
+        line-height: 1.5;
+        background: $light-color;
+    }
 }
 
-.container {
-    position: relative;
-    background: $bg-image no-repeat center center/cover;
-    height: 100vh;
-    width: 100%;
-}
+header {
+    h1 {
+        text-align: start;
+        font-family: $logo-font;
+    }
 
-.container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 6);
-    opacity: 0;
-}
+    // Navbar configuration
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $dark-color;
+        color: #fff;
+        opacity: 0.8;
+        width: 100%;
+        height: 70px;
+        position: fixed;
+        top: 0px;
+        padding: 30px;
 
-.container * {
-    z-index: 10;
+        a {
+            font-family: $title-font;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+
+            &:hover {
+                color: $primary-color;
+                border-bottom: $primary-color 3px solid;
+            }
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+    }
+
+    // Hero page configuration
+    .content {
+        font-family: $body-font;
+
+        h1 {
+            font-family: $title-font;
+            color: $light-color;
+            line-height: 1.2;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        a {
+            font-family: $title-font;
+            color: $light-color;
+        }
+    }
+    
 }
