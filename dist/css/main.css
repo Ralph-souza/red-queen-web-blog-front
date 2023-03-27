@@ -1,6 +1,22 @@
 .logo-text {
   color: #C10505; }
 
+.btn-hero {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #E11212;
+  opacity: 0.8;
+  border: none;
+  border-radius: 50px; }
+  .btn-hero:hover {
+    color: #C10505;
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    transition: 0.5s; }
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,43 +27,67 @@ bodyhome {
   line-height: 1.5;
   background: #f4f4f4; }
 
-header h1 {
-  text-align: start;
-  font-family: "Great Vibes", "cursive"; }
-
-header .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #333;
-  color: #fff;
-  opacity: 0.8;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  top: 0px;
-  padding: 30px; }
-  header .navbar a {
-    font-family: "Anton", sans-serif;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    margin: 0 5px; }
-    header .navbar a:hover {
-      color: #C10505;
-      border-bottom: #C10505 3px solid; }
-  header .navbar ul {
+header .hero {
+  background: url("../img/red_queen.png") no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #fff; }
+  header .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  header .hero * {
+    z-index: 10; }
+  header .hero .logo h1 {
+    text-align: start;
+    font-family: "Great Vibes", "cursive"; }
+  header .hero .navbar {
     display: flex;
-    list-style: none; }
-
-header .content {
-  font-family: "Roboto Condensed", sans-serif; }
-  header .content h1 {
-    font-family: "Anton", sans-serif;
-    color: #f4f4f4;
-    line-height: 1.2; }
-  header .content p {
-    margin: 10px 0; }
-  header .content a {
-    font-family: "Anton", sans-serif;
-    color: #f4f4f4; }
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    padding: 30px; }
+    header .hero .navbar a {
+      font-family: "Anton", sans-serif;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 5px; }
+      header .hero .navbar a:hover {
+        color: #C10505;
+        border-bottom: #C10505 3px solid; }
+    header .hero .navbar ul {
+      display: flex;
+      list-style: none; }
+  header .hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    padding: 0 20px; }
+    header .hero .content h1 {
+      font-family: "Anton", sans-serif;
+      font-size: 55px;
+      color: #f4f4f4;
+      line-height: 1.2; }
+    header .hero .content p {
+      margin: 20px 0 20px;
+      font-size: 25px;
+      max-width: 600px; }
+    header .hero .content a {
+      font-family: "Anton", sans-serif;
+      text-decoration: none;
+      color: #f4f4f4; }
