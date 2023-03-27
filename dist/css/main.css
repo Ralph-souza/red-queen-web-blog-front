@@ -1,5 +1,6 @@
 .logo-text {
-  color: #C10505; }
+  font-family: "Anton", sans-serif;
+  color: #FF1C1C; }
 
 .btn-hero {
   cursor: pointer;
@@ -17,12 +18,27 @@
     -moz-transform: scale(1.2, 1.2);
     transition: 0.5s; }
 
+.btn-about {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #333;
+  opacity: 0.8;
+  border: none;
+  border-radius: 50px; }
+  .btn-about:hover {
+    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.2, 1.2);
+    -moz-transform: scale(1.2, 1.2);
+    transition: 0.5s; }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0; }
 
-bodyhome {
+body {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 1.5;
   background: #f4f4f4; }
@@ -64,8 +80,8 @@ header .hero {
       padding: 10px 20px;
       margin: 0 5px; }
       header .hero .navbar a:hover {
-        color: #C10505;
-        border-bottom: #C10505 3px solid; }
+        color: #FF1C1C;
+        border-bottom: #FF1C1C 3px solid; }
     header .hero .navbar ul {
       display: flex;
       list-style: none; }
@@ -91,3 +107,38 @@ header .hero {
       font-family: "Anton", sans-serif;
       text-decoration: none;
       color: #f4f4f4; }
+
+main #about .content-a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+  text-align: center;
+  padding: 0 20px;
+  background-color: #ccc; }
+  main #about .content-a .about-text {
+    font-family: "Anton", sans-serif;
+    font-size: 55px;
+    color: #FF1C1C;
+    line-height: 1.2;
+    padding: 20px 0 20px; }
+  main #about .content-a .img-a {
+    height: 20%;
+    margin-bottom: 10px 0 10px; }
+  main #about .content-a .body-text-a {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0 20px;
+    max-width: 600px; }
+  main #about .content-a p {
+    font-size: 25px;
+    color: #fff;
+    margin: 20px 0 20px;
+    max-width: 600px; }
+  main #about .content-a a {
+    font-family: "Anton", sans-serif;
+    text-decoration: none;
+    margin: 20px 0 20px;
+    color: #f4f4f4; }

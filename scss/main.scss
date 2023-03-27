@@ -8,11 +8,9 @@
 }
 
 body {
-    &home {
-        font-family: $body-font;
-        line-height: 1.5;
-        background: $light-color;
-    }
+    font-family: $body-font;
+    line-height: 1.5;
+    background: $light-color;
 }
 
 header {  
@@ -64,8 +62,8 @@ header {
                 margin: 0 5px;
 
                 &:hover {
-                    color: $primary-color;
-                    border-bottom: $primary-color 3px solid;
+                    color: $logo-color;
+                    border-bottom: $logo-color 3px solid;
                 }
             }
 
@@ -105,6 +103,55 @@ header {
                 color: $light-color;
             }
         }
+    } 
+}
+
+main {
+    #about {
+        .content-a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: $body-font;
+            text-align: center;
+            padding: 0 20px;
+            background-color: $medium-color;
+
+            .about-text {
+                font-family: $title-font;
+                font-size: 55px;
+                color: $logo-color;
+                line-height: 1.2;
+                padding: 20px 0 20px;
+            }
+
+            .img-a {
+                height: 20%;
+                margin-bottom: 10px 0 10px;
+            }
+
+            .body-text-a {
+                font-size: 16px;
+                color: $dark-color;
+                margin: 20px 0 20px;
+                max-width: 600px;
+            }
+
+            p {
+                font-size: 25px;
+                color: #fff;
+                margin: 20px 0 20px;
+                max-width: 600px;
+            }
+
+            a {
+                font-family: $title-font;
+                text-decoration: none;
+                margin: 20px 0 20px;
+                color: $light-color;
+            }
+        }
     }
-    
 }
