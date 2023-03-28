@@ -16,7 +16,7 @@ body {
 header {  
     // Hero configuration
     .hero {
-        background: $bg-image no-repeat center center/cover;
+        background: $hero-bg-image no-repeat center center/cover;
         height: 100vh;
         position: relative;
         color: #fff;
@@ -93,7 +93,7 @@ header {
 
             p {
                 margin: 20px 0 20px;
-                font-size: 25px;
+                font-size: 23px;
                 max-width: 600px;
             }
 
@@ -113,11 +113,27 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
             height: 100vh;
             font-family: $body-font;
             text-align: center;
             padding: 0 20px;
+            background: $about-bg-image no-repeat center center/cover;
             background-color: $medium-color;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+            }
+    
+            & * {
+                z-index: 10;
+            }
 
             .about-text {
                 font-family: $title-font;
@@ -134,14 +150,14 @@ main {
 
             .body-text-a {
                 font-size: 16px;
-                color: $dark-color;
+                color: #fff;
                 margin: 20px 0 20px;
                 max-width: 600px;
             }
 
             p {
-                font-size: 25px;
-                color: #fff;
+                font-size: 23px;
+                color: $light-color;
                 margin: 20px 0 20px;
                 max-width: 600px;
             }
@@ -151,6 +167,176 @@ main {
                 text-decoration: none;
                 margin: 20px 0 20px;
                 color: $light-color;
+            }
+        }
+    }
+
+    #blog-articles {
+        .content-b {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: $body-font;
+            background-color: $medium-color;
+            height: 100vh;
+
+            .text-container {
+                p{
+                    font-size: 23px;
+                    color: $light-color;
+                    margin: 20px 0 20px;
+                    max-width: 600px;
+                }
+
+                .body-text-b {
+                    font-family: $body-font;
+                    font-size: 16px;
+                    max-width: 600px;
+                    margin: 20px 0 20px;
+                }
+
+                .blog-text {
+                    font-family: $title-font;
+                    font-size: 55px;
+                    line-height: 1.2;
+                    color: #fff;
+                    margin: 20px 0 20px;
+                    padding: 20px 0 20px;
+                }
+            }
+
+            .logos-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content:center; 
+                max-width: 600px;
+                margin: 20px 0 20px;
+
+                p {
+                    font-family: $body-font;
+                    font-size: 16px;
+                    text-align: center;
+                    color: $dark-color;
+                    max-width: 600px;
+                }
+
+                .front-logos {
+                    display: inline-grid;
+                    grid-template-columns: repeat(5, 1fr);
+                    grid-gap: 50px;
+                    max-width: 600px;
+                    margin: 10px 0 10px;
+                    color: $light-color;
+
+                    .fa-html5 {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-css3-alt {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-sass {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-square-js {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-react {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+                }
+
+                .back-logos {
+                    display: inline-grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    max-width: 600px;
+                    margin: 10px 0 10px;
+                    color: $light-color;
+
+                    .fa-python {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+                }
+
+                .containers {
+                    display: inline-grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    max-width: 600px;
+                    margin: 10px 0 10px;
+                    color: $light-color;
+
+                    .fa-docker {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+                }
+
+                .version-control {
+                    display: inline-grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 50px;
+                    max-width: 600px;
+                    margin: 10px 0 10px;
+                    color: $light-color;
+
+                    .fa-square-git {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-square-github {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-square-gitlab {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+                }
+
+                .cloud {
+                    display: inline-grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 50px;
+                    max-width: 600px;
+                    margin: 10px 0 0 0;
+                    color: $light-color;
+
+                    .fa-aws {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+
+                    .fa-google {
+                        &:hover {
+                            color: $logo-color;
+                        }
+                    }
+                }
             }
         }
     }

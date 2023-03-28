@@ -23,7 +23,7 @@
   display: inline-block;
   padding: 10px 30px;
   color: #fff;
-  background-color: #333;
+  background-color: #FF1C1C;
   opacity: 0.8;
   border: none;
   border-radius: 50px; }
@@ -44,7 +44,7 @@ body {
   background: #f4f4f4; }
 
 header .hero {
-  background: url("../img/red_queen.png") no-repeat center center/cover;
+  background: url("../img/background/red_queen.png") no-repeat center center/cover;
   height: 100vh;
   position: relative;
   color: #fff; }
@@ -101,7 +101,7 @@ header .hero {
       line-height: 1.2; }
     header .hero .content p {
       margin: 20px 0 20px;
-      font-size: 25px;
+      font-size: 23px;
       max-width: 600px; }
     header .hero .content a {
       font-family: "Anton", sans-serif;
@@ -113,11 +113,23 @@ main #about .content-a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
   height: 100vh;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
   padding: 0 20px;
+  background: url("../img/background/card_suits_bg.png") no-repeat center center/cover;
   background-color: #ccc; }
+  main #about .content-a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+  main #about .content-a * {
+    z-index: 10; }
   main #about .content-a .about-text {
     font-family: "Anton", sans-serif;
     font-size: 55px;
@@ -129,12 +141,12 @@ main #about .content-a {
     margin-bottom: 10px 0 10px; }
   main #about .content-a .body-text-a {
     font-size: 16px;
-    color: #333;
+    color: #fff;
     margin: 20px 0 20px;
     max-width: 600px; }
   main #about .content-a p {
-    font-size: 25px;
-    color: #fff;
+    font-size: 23px;
+    color: #f4f4f4;
     margin: 20px 0 20px;
     max-width: 600px; }
   main #about .content-a a {
@@ -142,3 +154,100 @@ main #about .content-a {
     text-decoration: none;
     margin: 20px 0 20px;
     color: #f4f4f4; }
+
+main #blog-articles .content-b {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #ccc;
+  height: 100vh; }
+  main #blog-articles .content-b .text-container p {
+    font-size: 23px;
+    color: #f4f4f4;
+    margin: 20px 0 20px;
+    max-width: 600px; }
+  main #blog-articles .content-b .text-container .body-text-b {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 20px 0 20px; }
+  main #blog-articles .content-b .text-container .blog-text {
+    font-family: "Anton", sans-serif;
+    font-size: 55px;
+    line-height: 1.2;
+    color: #fff;
+    margin: 20px 0 20px;
+    padding: 20px 0 20px; }
+  main #blog-articles .content-b .logos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 20px 0 20px; }
+    main #blog-articles .content-b .logos-container p {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 16px;
+      text-align: center;
+      color: #333;
+      max-width: 600px; }
+    main #blog-articles .content-b .logos-container .front-logos {
+      display: inline-grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 50px;
+      max-width: 600px;
+      margin: 10px 0 10px;
+      color: #f4f4f4; }
+      main #blog-articles .content-b .logos-container .front-logos .fa-html5:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .front-logos .fa-css3-alt:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .front-logos .fa-sass:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .front-logos .fa-square-js:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .front-logos .fa-react:hover {
+        color: #FF1C1C; }
+    main #blog-articles .content-b .logos-container .back-logos {
+      display: inline-grid;
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 600px;
+      margin: 10px 0 10px;
+      color: #f4f4f4; }
+      main #blog-articles .content-b .logos-container .back-logos .fa-python:hover {
+        color: #FF1C1C; }
+    main #blog-articles .content-b .logos-container .containers {
+      display: inline-grid;
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 600px;
+      margin: 10px 0 10px;
+      color: #f4f4f4; }
+      main #blog-articles .content-b .logos-container .containers .fa-docker:hover {
+        color: #FF1C1C; }
+    main #blog-articles .content-b .logos-container .version-control {
+      display: inline-grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+      max-width: 600px;
+      margin: 10px 0 10px;
+      color: #f4f4f4; }
+      main #blog-articles .content-b .logos-container .version-control .fa-square-git:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .version-control .fa-square-github:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .version-control .fa-square-gitlab:hover {
+        color: #FF1C1C; }
+    main #blog-articles .content-b .logos-container .cloud {
+      display: inline-grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 50px;
+      max-width: 600px;
+      margin: 10px 0 0 0;
+      color: #f4f4f4; }
+      main #blog-articles .content-b .logos-container .cloud .fa-aws:hover {
+        color: #FF1C1C; }
+      main #blog-articles .content-b .logos-container .cloud .fa-google:hover {
+        color: #FF1C1C; }
