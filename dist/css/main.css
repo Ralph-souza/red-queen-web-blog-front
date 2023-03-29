@@ -12,7 +12,6 @@
   border: none;
   border-radius: 50px; }
   .btn-hero:hover {
-    color: #C10505;
     transform: scale(1.2, 1.2);
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -75,7 +74,7 @@ header .hero {
     z-index: 10; }
   header .hero .logo h1 {
     text-align: start;
-    font-family: "Great Vibes", "cursive"; }
+    font-family: "Anton", sans-serif; }
   header .hero .navbar {
     display: flex;
     align-items: center;
@@ -178,8 +177,18 @@ main #about .content-a {
 main #articles .row {
   display: flex;
   flex-direction: row;
+  position: relative;
   height: 100vh;
+  width: 100%;
   background: #ccc; }
+  main #articles .row::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); }
   main #articles .row .content-a {
     display: flex;
     flex-direction: column;
@@ -188,8 +197,7 @@ main #articles .row {
     text-align: center;
     height: 100%;
     width: 50%;
-    padding: 0 20px;
-    margin: 20px 20px; }
+    padding: 0 30px; }
     main #articles .row .content-a .title-text-c {
       font-family: "Anton", sans-serif;
       font-size: 55px;
@@ -212,6 +220,8 @@ main #articles .row {
       text-decoration: none;
       margin: 20px 0 20px;
       color: #f4f4f4; }
+    main #articles .row .content-a * {
+      z-index: 10; }
   main #articles .row .content-b {
     display: flex;
     flex-direction: column;
@@ -220,81 +230,83 @@ main #articles .row {
     text-align: center;
     height: 100%;
     width: 50%;
-    padding: 0 20px;
-    margin: 20px 20px; }
+    background-color: #FF1C1C; }
     main #articles .row .content-b p {
       font-family: "Anton", sans-serif;
-      font-size: 18px; }
+      font-size: 18px;
+      color: #f4f4f4; }
     main #articles .row .content-b .front-logos {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       grid-gap: 50px;
       margin: 20px 0 20px; }
       main #articles .row .content-b .front-logos .fa-html5 {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .front-logos .fa-html5:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .front-logos .fa-css3-alt {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .front-logos .fa-css3-alt:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .front-logos .fa-sass {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .front-logos .fa-sass:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .front-logos .fa-square-js {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .front-logos .fa-square-js:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .front-logos .fa-react {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .front-logos .fa-react:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
     main #articles .row .content-b .back-logos {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 50px;
       margin: 20px 0 20px; }
       main #articles .row .content-b .back-logos .fa-python {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .back-logos .fa-python:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
     main #articles .row .content-b .containers {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       grid-gap: 50px;
       margin: 20px 0 20px; }
       main #articles .row .content-b .containers .fa-docker {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .containers .fa-docker:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
     main #articles .row .content-b .version-control {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 50px;
       margin: 20px 0 20px; }
       main #articles .row .content-b .version-control .fa-square-git {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .version-control .fa-square-git:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .version-control .fa-square-github {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .version-control .fa-square-github:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .version-control .fa-square-gitlab {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .version-control .fa-square-gitlab:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
     main #articles .row .content-b .cloud-database {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 50px;
       margin: 20px 0 20px; }
       main #articles .row .content-b .cloud-database .fa-aws {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .cloud-database .fa-aws:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
       main #articles .row .content-b .cloud-database .fa-google {
-        color: #f4f4f4; }
+        color: #D89506; }
         main #articles .row .content-b .cloud-database .fa-google:hover {
-          color: #FF1C1C; }
+          color: #f4f4f4; }
+    main #articles .row .content-b * {
+      z-index: 10; }
