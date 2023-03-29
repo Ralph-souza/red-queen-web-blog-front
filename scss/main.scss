@@ -92,8 +92,9 @@ header {
             }
 
             p {
+                font-family: $body-font;
+                font-size: 20px;
                 margin: 20px 0 20px;
-                font-size: 23px;
                 max-width: 600px;
             }
 
@@ -135,12 +136,16 @@ main {
                 z-index: 10;
             }
 
-            .about-text {
+            .title-text-a {
                 font-family: $title-font;
                 font-size: 55px;
-                color: $logo-color;
+                color: $light-color;
                 line-height: 1.2;
                 padding: 20px 0 20px;
+
+                .highlight-text-a {
+                    color: $logo-color;
+                }
             }
 
             .img-a {
@@ -148,15 +153,18 @@ main {
                 margin-bottom: 10px 0 10px;
             }
 
-            .body-text-a {
-                font-size: 16px;
-                color: #fff;
+
+            p {
+                font-family: $title-font;
+                font-size: 20px;
+                color: $light-color;
                 margin: 20px 0 20px;
                 max-width: 600px;
             }
 
-            p {
-                font-size: 23px;
+            .body-text-a {
+                font-family: $body-font;
+                font-size: 18px;
                 color: $light-color;
                 margin: 20px 0 20px;
                 max-width: 600px;
@@ -171,91 +179,114 @@ main {
         }
     }
 
-    #blog-articles {
-        .content-b {
+    #articles {
+        .row {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-family: $body-font;
-            background-color: $medium-color;
+            flex-direction: row;
             height: 100vh;
+            background: $medium-color;
 
-            .text-container {
-                p{
-                    font-size: 23px;
+            .content-a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                width: 50%;
+                padding: 0 20px;
+                margin: 20px 20px;
+
+                .title-text-c {
+                    font-family: $title-font;
+                    font-size: 55px;
+                    line-height: 1.2;
+                    margin: 20px 0 20px;
+
+                    .highlight-text {
+                        color: $logo-color;
+                    }
+                }
+
+                p {
+                    font-family: $title-font;
+                    font-size: 20px;
                     color: $light-color;
                     margin: 20px 0 20px;
-                    max-width: 600px;
                 }
 
                 .body-text-b {
                     font-family: $body-font;
-                    font-size: 16px;
-                    max-width: 600px;
+                    font-size: 18px;
+                    color: $light-color;
                     margin: 20px 0 20px;
                 }
 
-                .blog-text {
+                a {
                     font-family: $title-font;
-                    font-size: 55px;
-                    line-height: 1.2;
-                    color: #fff;
+                    text-decoration: none;
                     margin: 20px 0 20px;
-                    padding: 20px 0 20px;
+                    color: $light-color;
                 }
             }
 
-            .logos-container {
+            .content-b {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content:center; 
-                max-width: 600px;
-                margin: 20px 0 20px;
+                justify-content: center;
+                text-align: center;
+                height: 100%;
+                width: 50%;
+                padding: 0 20px;
+                margin: 20px 20px;
 
                 p {
-                    font-family: $body-font;
-                    font-size: 16px;
-                    text-align: center;
-                    color: $dark-color;
-                    max-width: 600px;
+                    font-family: $title-font;
+                    font-size: 18px;
                 }
 
                 .front-logos {
-                    display: inline-grid;
+                    display: grid;
                     grid-template-columns: repeat(5, 1fr);
                     grid-gap: 50px;
-                    max-width: 600px;
-                    margin: 10px 0 10px;
-                    color: $light-color;
-
+                    margin: 20px 0 20px;
+                    
                     .fa-html5 {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-css3-alt {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-sass {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-square-js {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-react {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
@@ -263,75 +294,83 @@ main {
                 }
 
                 .back-logos {
-                    display: inline-grid;
+                    display: grid;
                     grid-template-columns: repeat(1, 1fr);
-                    max-width: 600px;
-                    margin: 10px 0 10px;
-                    color: $light-color;
-
+                    grid-gap: 50px;
+                    margin: 20px 0 20px;
+                    
                     .fa-python {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
                 }
-
+                
                 .containers {
-                    display: inline-grid;
+                    display: grid;
                     grid-template-columns: repeat(1, 1fr);
-                    max-width: 600px;
-                    margin: 10px 0 10px;
-                    color: $light-color;
-
+                    grid-gap: 50px;
+                    margin: 20px 0 20px;
+                    
                     .fa-docker {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
                 }
-
+                
                 .version-control {
-                    display: inline-grid;
+                    display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-gap: 50px;
-                    max-width: 600px;
-                    margin: 10px 0 10px;
-                    color: $light-color;
-
+                    margin: 20px 0 20px;
+                    
                     .fa-square-git {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-square-github {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-square-gitlab {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
                 }
-
-                .cloud {
-                    display: inline-grid;
+                
+                .cloud-database {
+                    display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 50px;
-                    max-width: 600px;
-                    margin: 10px 0 0 0;
-                    color: $light-color;
-
+                    margin: 20px 0 20px;
+                    
                     .fa-aws {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
                     }
 
                     .fa-google {
+                        color: $light-color;
+
                         &:hover {
                             color: $logo-color;
                         }
