@@ -226,7 +226,6 @@ main {
                     font-size: 25px;
                     color: $light-color;
                     margin: 5px 0 0 0;
-                    max-width: 600px;
                 }
 
                 .body-text-b {
@@ -345,11 +344,129 @@ main {
     // Portfolio page configuration
     #portfolio {
         .content-d {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: $light-color;
+            background-color: $medium-color;
             height: 50vh;
+            width: 100%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            
+            & * {
+                z-index: 10;
+            }
+
+            .title-text-d {
+                font-family: $title-font;
+                font-size: 55px;
+                color: $light-color;
+                line-height: 1.2;
+                margin: 100px 0 0 0;
+            }
+
+            .highlight-d {
+                @extend %highlight;
+            }
+
+            .phrase-d {
+                @extend %phrase;
+            }
+
+            p {
+                font-family: $body-font;
+                font-size: 25px;
+                color: $light-color;
+                margin: 5px 0 0 0;
+            }
+
+            .body-text-d {
+                @extend %body-text;
+            }
         }
 
         .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+            background-color: $primary-color;
+            align-items: center;
+            justify-content: space-between;
             height: 50vh;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            
+            & * {
+                z-index: 10;
+            }
+
+            .videos {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .phrase-e {
+                    @extend %phrase;
+                }
+
+                .fa-play {
+                    @extend %icons-shared;
+                    margin: 20px 0 20px;
+                }
+
+                .body-text-e {
+                    font-family: $body-font;
+                    font-size: 18px;
+                    text-align: center;
+                    color: $light-color;
+                    max-width: 50%;
+                }
+            }
+
+            .web-templates {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .phrase-f {
+                    @extend %phrase;
+                }
+
+                .fa-code {
+                    @extend %icons-shared;
+                    margin: 20px 0 20px;
+                }
+
+                .body-text-f {
+                    font-family: $body-font;
+                    font-size: 18px;
+                    text-align: center;
+                    color: $light-color;
+                    max-width: 50%;
+                }
+            }
         }
     }
 }
