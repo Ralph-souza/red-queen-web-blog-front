@@ -35,7 +35,7 @@ header {
             z-index: 10;
         }
 
-        .logo h1 {
+        .logo {
             text-align: start;
             font-family: $title-font;
         }
@@ -63,7 +63,6 @@ header {
 
                 &:hover {
                     color: $primary-color;
-                    border-bottom: $primary-color 3px solid;
                 }
             }
 
@@ -73,8 +72,8 @@ header {
             }
         }
 
-        // Content configuration
-        .content {
+        // Header content configuration
+        .content-a {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -84,32 +83,37 @@ header {
             text-align: center;
             padding: 0 20px;
 
-            h1 {
+            .title-text-a {
                 font-family: $title-font;
                 font-size: 55px;
                 color: $light-color;
                 line-height: 1.2;
+                margin: 20px 0 20px;
+            }
+
+            .highlight-a {
+                @extend %highlight;
+            }
+
+            .phrase-a {
+                @extend %phrase;
             }
 
             p {
                 font-family: $body-font;
-                font-size: 20px;
-                margin: 20px 0 20px;
-                max-width: 600px;
-            }
-
-            a {
-                font-family: $title-font;
-                text-decoration: none;
+                font-size: 25px;
                 color: $light-color;
+                margin: 10px 0 10px;
+                max-width: 600px;
             }
         }
     } 
 }
 
 main {
+    // About page configuration
     #about {
-        .content-a {
+        .content-b {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -136,16 +140,28 @@ main {
                 z-index: 10;
             }
 
-            .title-text-a {
+            .title-text-b {
                 font-family: $title-font;
                 font-size: 55px;
                 color: $light-color;
                 line-height: 1.2;
                 padding: 20px 0 20px;
 
-                .highlight-text-a {
-                    color: $primary-color;
+                .highlight-b {
+                    @extend %highlight;
                 }
+            }
+
+            .phrase-b {
+                @extend %phrase;
+            }
+
+            p {
+                font-family: $body-font;
+                font-size: 25px;
+                color: $light-color;
+                margin: 5px 0 0 0;
+                max-width: 600px;
             }
 
             .img-a {
@@ -153,32 +169,13 @@ main {
                 margin-bottom: 10px 0 10px;
             }
 
-
-            p {
-                font-family: $title-font;
-                font-size: 20px;
-                color: $light-color;
-                margin: 20px 0 20px;
-                max-width: 600px;
-            }
-
             .body-text-a {
-                font-family: $body-font;
-                font-size: 18px;
-                color: $light-color;
-                margin: 20px 0 20px;
-                max-width: 600px;
-            }
-
-            a {
-                font-family: $title-font;
-                text-decoration: none;
-                margin: 20px 0 20px;
-                color: $light-color;
+                @extend %body-text;
             }
         }
     }
 
+    // Articles page configuration
     #articles {
         .row {
             display: flex;
@@ -198,7 +195,7 @@ main {
                 background: rgba(0, 0, 0, 0.3);
             }
 
-            .content-a {
+            .content-c {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -211,33 +208,29 @@ main {
                 .title-text-c {
                     font-family: $title-font;
                     font-size: 55px;
+                    color: $light-color;
                     line-height: 1.2;
                     margin: 20px 0 20px;
 
-                    .highlight-text {
-                        color: $primary-color;
+                    .highlight-c {
+                        @extend %highlight;
                     }
                 }
 
+                .phrase-c {
+                    @extend %phrase;
+                }
+
                 p {
-                    font-family: $title-font;
-                    font-size: 20px;
+                    font-family: $body-font;
+                    font-size: 25px;
                     color: $light-color;
-                    margin: 20px 0 20px;
+                    margin: 5px 0 0 0;
+                    max-width: 600px;
                 }
 
                 .body-text-b {
-                    font-family: $body-font;
-                    font-size: 18px;
-                    color: $light-color;
-                    margin: 20px 0 20px;
-                }
-
-                a {
-                    font-family: $title-font;
-                    text-decoration: none;
-                    margin: 20px 0 20px;
-                    color: $light-color;
+                    @extend %body-text;
                 }
 
                 & * {
@@ -245,7 +238,7 @@ main {
                 }
             }
 
-            .content-b {
+            .content-d {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -268,43 +261,23 @@ main {
                     margin: 20px 0 20px;
                     
                     .fa-html5 {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-css3-alt {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-sass {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-square-js {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-react {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
                 }
 
@@ -315,11 +288,7 @@ main {
                     margin: 20px 0 20px;
                     
                     .fa-python {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
                 }
                 
@@ -329,13 +298,7 @@ main {
                     grid-gap: 50px;
                     margin: 20px 0 20px;
                     
-                    .fa-docker {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
-                    }
+                    @extend %icons-shared;
                 }
                 
                 .version-control {
@@ -345,27 +308,15 @@ main {
                     margin: 20px 0 20px;
                     
                     .fa-square-git {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-square-github {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-square-gitlab {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
                 }
                 
@@ -376,19 +327,11 @@ main {
                     margin: 20px 0 20px;
                     
                     .fa-aws {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
 
                     .fa-google {
-                        color: $secondary-color;
-
-                        &:hover {
-                            color: $light-color;
-                        }
+                        @extend %icons-shared;
                     }
                 }
 
@@ -396,6 +339,17 @@ main {
                     z-index: 10;
                 }
             }
+        }
+    }
+
+    // Portfolio page configuration
+    #portfolio {
+        .content-d {
+            height: 50vh;
+        }
+
+        .portfolio-grid {
+            height: 50vh;
         }
     }
 }
