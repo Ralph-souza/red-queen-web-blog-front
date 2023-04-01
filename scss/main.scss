@@ -472,6 +472,7 @@ main {
         }
     }
 
+    // Contact page configuration
     #contact {
         .form-container {
             display: flex;
@@ -484,91 +485,121 @@ main {
             background-color: $medium-color;
             background: $contact-bg-image no-repeat center center/cover;
 
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            
+            & * {
+                z-index: 10;
+            }
+
+            .title-text-e {
+                font-family: $title-font;
+                font-size: 55px;
+                color: $light-color;
+                line-height: 1.2;
+                margin: 0 20px 0 x;
+            } 
+
+            .highlight-e {
+                @extend %highlight;
+            }
+
+            .body-text-g {
+                @extend %body-text;
+            }
+
            .contact-form {
-            width: 700px;
+                width: 700px;
            }
 
            .form-fieldset {
-            display: flex;
-            padding: 20px 20px 0 20px;
-            border: none;
+                display: flex;
+                padding: 20px 20px 0 20px;
+                border: none;
            }
 
            .form-label {
-            font-family: $title-font;
-            font-size: 20px;
-            margin-right: 15px;
-            color: $primary-color;
-            padding-right: 10px;
-            text-align: center;
+                font-family: $title-font;
+                font-size: 20px;
+                margin-right: 15px;
+                color: $primary-color;
+                padding-right: 10px;
+                text-align: center;
            }
 
            .form-label.name-set {
-            display: flex;
-            align-items: start;
-            width: 100px;
-            margin-right: 0;
+                display: flex;
+                align-items: start;
+                width: 100px;
+                margin-right: 0;
            }
 
            .form-label.email-set {
-            display: flex;
-            align-items: start;
-            width: 100px;
-            margin-right: 0;
+                display: flex;
+                align-items: start;
+                width: 100px;
+                margin-right: 0;
            }
 
            .form-label.subject-set {
-            display: flex;
-            align-items: start;
-            width: 100px;
-            margin-right: 0;
+                display: flex;
+                align-items: start;
+                width: 100px;
+                margin-right: 0;
            }
 
            .form-label.message-set {
-            display: flex;
-            align-items: start;
-            width: 100px;
-            margin-right: 0;
+                display: flex;
+                align-items: start;
+                width: 100px;
+                margin-right: 0;
            }
 
            .form-input {
-            display: flex;
-            align-items: start;
-            font-family: $body-font;
-            max-width: 600px;
-            margin-left: 20px;
-            border: none;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+                display: flex;
+                align-items: start;
+                font-family: $body-font;
+                max-width: 600px;
+                margin-left: 20px;
+                border: none;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
            }
 
            .form-input.name-input {
-            width: 200px;
+                width: 200px;
            }
 
            .form-input.email-input {
-            width: 420px;
+                width: 420px;
            }
 
            .form-input.subject-input {
-            width: 420px;
+                width: 420px;
            }
            
            .form-textarea {
-            width: 420px;
+                width: 420px;
            }
 
            input[type=text]:focus,
            input[type=email]:focus, 
            textarea:focus {
-            box-shadow: 0 0 5px rgba(255, 28, 28, 1);
-            border: 1px solid rgba(255, 28, 28, 1);
-            outline: none;
+                box-shadow: 0 0 5px rgba(255, 28, 28, 1);
+                border: 1px solid rgba(255, 28, 28, 1);
+                outline: none;
           }
 
            .btn-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
            }
         }
     }
