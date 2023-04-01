@@ -603,4 +603,81 @@ main {
            }
         }
     }
+
+    // Footer section configuration
+    #footer-info {
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+            height: 30vh;
+            background-color: $dark-color;
+            align-items: center;
+            justify-content: space-between;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.3);
+            }
+            
+            & * {
+                z-index: 10;
+            }
+
+            .content-e {
+                .footer-logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    a {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .content-f {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .icons {
+                    margin: 10px 0;
+                    .fa-github {
+                        margin: 0 10px;
+                        @extend %icons-shared;
+                    }
+
+                    .fa-linkedin-in {
+                        margin: 0 10px;
+                        @extend %icons-shared;
+                    }
+
+                    .fa-instagram {
+                        margin: 0 10px;
+                        @extend %icons-shared;
+                    }
+
+                    .fa-twitter {
+                        margin: 0 10px;
+                        @extend %icons-shared;
+                    }
+
+                    .fa-youtube {
+                        margin: 0 10px;
+                        @extend %icons-shared;
+                    }
+                }
+
+                .copyright {
+                    @extend %body-text;
+                }
+            }
+        }
+    }
 }
